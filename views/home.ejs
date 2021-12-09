@@ -1,9 +1,65 @@
 <html>
     <head>
         <title>To do list app</title>
+        <script src="https://kit.fontawesome.com/e178782a14.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
-        
+        <div id = "container">
+            <header>
+                <div class = "headerText">My TODO List</div>
+                <div id = "toggle" class="toggleButton">
+                    <i class="fas fa-plus"></i>
+                </div>
+                
+            </header>
+            <div id = "inputSection">
+               <form action="">
+                    <table>
+                        <tr>
+                            <th class="inputLabel">Category</th>
+                            <th class="inputLabel">Title</th>
+                            <th class="inputLabel">Date</th>
+                        </tr>
+                        <tr>
+                            <td>
+                               <select name="category" id="category">
+                                   <option value="SCHOOL">SCHOOL</option>
+                                   <option value="WORK">WORK</option>
+                                   <option value="SPORTS">SPORTS</option>
+                                   <option value="MUSIC">MUSIC</option>
+                                   <option value="SHOPPING">SHOPPING</option>
+
+                               </select>
+                            </td>
+                            <td>
+                                <input type="text" name="title">
+                            </td>
+                            <td>
+                                <input type="date" name="date">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="inputLabel title-description">Description</th>
+                        </tr>
+                        <tr>
+                           <td colspan="3">
+                            <input type="text" name="description" class="input-description">
+                           </td>
+                        </tr>
+                        
+                        <tr>
+                            <td colspan="3" class="text-align-center">
+                                <button type="submit" class="add-btn">
+                                    ADD
+                              </button>
+                            </td>
+
+                        </tr>
+                    </table>
+               </form>
+            </div>
+        </div>
     </body>
+    <script src="/js/home.js"></script>
 </html>

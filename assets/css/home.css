@@ -1,3 +1,100 @@
 body{
-    background-color: blue;
+    margin:0;
 }
+
+.text-align-center{
+    text-align: center;
+}
+
+:root{
+    --header-background : linear-gradient(to right,  rgba(42,72,107,1) 0%,rgba(80,122,167,1) 100%);
+    --shadow:1px 5px 10px -5px rgba(0,0,0,0.5);
+    --input-label-color: #607D8B;
+}
+#container{
+  width:50%;
+  margin: auto;
+
+}
+
+
+.rotate-45deg{
+ transform: rotate(135deg);
+}
+
+header{
+    height: 10vh;
+    background:var(--header-background);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+}
+
+.toggleButton{
+    cursor: pointer;
+    background:var(--header-background);
+    width:15%;
+    font-size:1.5rem;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toggleButton i{
+    transition: all 0.1s ease-in-out;
+}
+.headerText{
+    color:white;
+    letter-spacing: 5px;
+    font-size:2rem;
+    margin:1rem;
+
+}
+
+/* input section  */
+
+#inputSection{
+    transition: all 0.5s ease-in-out;
+}
+.title-description{
+    text-align: left;
+    
+
+}
+.input-description{
+    width:100%;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+input,select{
+    font-size:1.2rem;
+    outline:none;
+    border: none;
+    box-shadow: var(--shadow);
+    box-sizing: border-box;
+    padding:10px;
+    margin-bottom: 1rem;
+}
+.inputLabel{
+    font-size:1.3rem;
+    color:var(--input-label-color)
+}
+.add-btn{
+    font-size:1.2rem;
+    color:white;
+    background-color: var(--input-label-color);
+    border:none;
+    padding:0.5rem;
+    text-align: center;
+    cursor: pointer;
+}
+#inputSection{
+    width:100%;
+     display: flex;
+     justify-content: center;
+     box-sizing: border-box;
+     padding:2rem;
+}
+
