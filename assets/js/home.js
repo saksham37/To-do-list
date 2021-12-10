@@ -7,14 +7,24 @@ const inputSection  = document.querySelector('#inputSection');
 
 toggleButton.addEventListener('click',()=>{
     console.log('clicked');
-    if(plusIcon.classList.contains('rotate-45deg')){
-        plusIcon.classList.remove('rotate-45deg');
+    if(plusIcon.classList.contains('rotate-135deg')){
+        plusIcon.classList.remove('rotate-135deg');
     }
     else
-         plusIcon.classList.add('rotate-45deg');     
-
-    inputSection.style.height = 0;
-    inputSection.style = "transform: scale(0);"
+         plusIcon.classList.add('rotate-135deg');  
+         
+    
+       if(inputSection.classList.contains('animate-enter')){
+           inputSection.classList.remove('animate-enter');
+           inputSection.classList.add('animate-exit');
+       }
+       else{
+           inputSection.classList.remove('animate-exit');
+           inputSection.classList.add('animate-enter');
+        
+       }
+     
+    // inputSection.style.display = "flex";
 
 
     

@@ -14,11 +14,12 @@ body{
 #container{
   width:50%;
   margin: auto;
+  position: relative;
 
 }
 
 
-.rotate-45deg{
+.rotate-135deg{
  transform: rotate(135deg);
 }
 
@@ -42,7 +43,7 @@ header{
     align-items: center;
 }
 .toggleButton i{
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 .headerText{
     color:white;
@@ -54,9 +55,6 @@ header{
 
 /* input section  */
 
-#inputSection{
-    transition: all 0.5s ease-in-out;
-}
 .title-description{
     text-align: left;
     
@@ -86,15 +84,29 @@ input,select{
     color:white;
     background-color: var(--input-label-color);
     border:none;
-    padding:0.5rem;
+    padding:1rem;
     text-align: center;
     cursor: pointer;
 }
 #inputSection{
-    width:100%;
+    /* width:100%; */
+    width: 100%;
      display: flex;
      justify-content: center;
      box-sizing: border-box;
      padding:2rem;
-}
+     top:100px;
+    position: absolute;
+   
+    transition:all 0.5s ease-in-out;
 
+
+}
+.animate-exit{
+    top:-70 !important;
+    transform: scale(0);
+}
+.animate-enter{
+    top:100px !important;
+    transform: scale(1);
+}
