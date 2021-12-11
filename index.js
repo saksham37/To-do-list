@@ -4,7 +4,7 @@ const port = 8000;
 const ejs = require('ejs');
 
 
-
+const todolist = require('./model/todolist');
 // Seting up the view engint - ejs
 
 app.set('view engine','ejs');
@@ -12,7 +12,7 @@ app.set('views','./views');
 
 //We wil be storing the asset files such as css and js in the assets folder
 app.use(express.static('./assets'));
-
+app.use(express.urlencoded());
 
 //for redirecting every route to index.js in the routes folder
 
