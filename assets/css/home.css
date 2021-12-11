@@ -196,4 +196,13 @@ input,select{
     justify-content: center;
     font-size:1.5rem;
     cursor: pointer;
+    color:green;
+}
+
+
+#completed-list .list-item{
+    background-color: #c2f0c2;
+}
+#pending-list .list-item{
+    background-color: #f0d9d9;
 }

@@ -22,11 +22,7 @@ module.exports.addList = function(req,res){
             console.log("Cannot fetch data from the database ",err);
             return;
         }
-        res.render('home',{
-            animateType: 'animate-enter',
-            rotateAngle : 'rotate-135deg',
-            todolist
-        });
+        res.redirect('back');
 
     });
 };
