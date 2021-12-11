@@ -23,19 +23,7 @@ toggleButton.addEventListener('click',()=>{
            inputSection.classList.remove('animate-exit');
            inputSection.classList.add('animate-enter');
         
-       }
-
-       console.log("Height of the input section now : " + inputSection.getBoundingClientRect().height);
-       console.log("Top of the input section now : " + inputSection.getBoundingClientRect().top);
-
-      
-    // inputSection.style.display = "flex";
-
-
-    
+       }      
+   
 });
 
-//Setting up the lists section
-const listSection = document.querySelector('#lists');
-
-listSection.style.top = inputSection.getBoundingClientRect().top + inputSection.getBoundingClientRect().height;

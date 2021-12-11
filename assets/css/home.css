@@ -125,7 +125,7 @@ input,select{
     height:6vh;
     background: var(--header-background);
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     box-shadow: var(--shadow);
     border-left:5px solid pink;
 }
