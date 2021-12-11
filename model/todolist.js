@@ -5,10 +5,6 @@ const todolistSchema = new mongoose.Schema({
         type : String,
         required: true
     },
-    checked: {
-        type: Boolean,
-        required: true
-    },
     title : {
         type: String,
         required: true
@@ -18,7 +14,7 @@ const todolistSchema = new mongoose.Schema({
         required : true
     },
     date: {
-        type: String,
+        type: Date,
         required:true
     }
 }); 

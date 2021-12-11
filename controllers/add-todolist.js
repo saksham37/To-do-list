@@ -4,7 +4,6 @@ module.exports.addList = function(req,res){
     console.log(req.body);
     todolist.create({
         category: req.body.category,
-        checked : false,
         title: req.body.title,
         description: req.body.description,
         date: req.body.date

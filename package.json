@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/saksham37/To-do-list#readme",
   "dependencies": {
+    "advanced-date-parser": "^0.1.5",
     "ejs": "^3.1.6",
     "express": "^4.17.1",
     "mongoose": "^6.1.1",

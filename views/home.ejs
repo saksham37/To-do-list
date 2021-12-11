@@ -27,7 +27,7 @@
                         </tr>
                         <tr>
                             <td>
-                               <select name="category" id="category">
+                               <select name="category" id="category" required>
                                    <option value="SCHOOL">SCHOOL</option>
                                    <option value="WORK">WORK</option>
                                    <option value="SPORTS">SPORTS</option>
@@ -37,10 +37,10 @@
                                </select>
                             </td>
                             <td>
-                                <input type="text" name="title">
+                                <input type="text" name="title" required>
                             </td>
                             <td>
-                                <input type="date" name="date">
+                                <input type="date" name="date" required>
                             </td>
                         </tr>
                         <tr>
@@ -48,7 +48,7 @@
                         </tr>
                         <tr>
                            <td colspan="3">
-                            <input type="text" name="description" class="input-description">
+                            <input type="text" name="description" class="input-description" required>
                            </td>
                         </tr>
                         
@@ -63,63 +63,46 @@
                     </table>
                </form>
             </div>
+            <div id = "delete-tasks" class = "list-header">
+                   <span class="list-heading">
+                          Select tasks to delete
+                   </span>
+            </div>
+            <div class="d-flex justify-center">
+                  <button type="submit" class="add-btn" form="checkbox-form">
+                       Delete tasks &ensp;
+                       <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
             <div id = "lists">
-                <div id = "pending-section">
-                      <div class = "list-header">
-                          <span class = "list-heading"> Pending Tasks</span>
-                          <span class = "list-heading">()</span>
-                      </div>
-                      <ul id = "pending-list">
-                         <%for(let i of pending_list){%>
-                         <li class = "list-item">
-                             <div class = "checkbox">
-                                <i class="far fa-square"></i>
-                             </div>
-                              <div class = "category">
-                                  <span><%=i.category%></span>
-                              </div>
-                              <div class = "item-info">
-                                  <span class = "title"><%=i.title%></span> <br>
-                                  <span class = "description-text"><%=i.description%></span>
-                              </div>
-                              <div class = "bin">
-                                <i class="fas fa-trash-alt"></i>
-                              </div>
-                              <div class = "date">
-                                  <%=i.date%>
-                                </div>
-                         </li>
-                         <%}%>
-                      </ul>
+                <div class = "list-header">
+                    <span class = "list-heading"> Pending Tasks</span>
                 </div>
-                <div id = "completed">
-                        <div class="list-header">
-                            <span class = "list-heading"> Completed Tasks</span>
-                            <span class = "list-heading">()</span>
+                <ul>
+                    <form action="/checkbox-input" method="post" id = "checkbox-form">
+                    <%for(let i of todolist){%>
+                    <li class = "list-item">
+                            <div class = "checkbox">
+                                <input type="checkbox" name = "checkbox" value = "<%=i._id%>">
+                            </div>
+                        <div class = "category">
+                            <span><%=i.category%></span>
                         </div>
-                        <ul id = "completed-list">
-                            <%for(let i of pending_list){%>
-                                <li class = "list-item">
-                                    <div class = "checkbox">
-                                       <i class="fas fa-check-square"></i>
-                                    </div>
-                                     <div class = "category">
-                                         <span><%=i.category%></span>
-                                     </div>
-                                     <div class = "item-info">
-                                         <span class = "title"><%=i.title%></span> <br>
-                                         <span class = "description-text"><%=i.description%></span>
-                                     </div>
-                                     <div class = "bin">
-                                       <i class="fas fa-trash-alt"></i>
-                                     </div>
-                                     <div class = "date">
-                                         <%=i.date%>
-                                       </div>
-                                </li>
-                                <%}%>
-                        </ul>
-                </div>
+                        <div class = "item-info">
+                            <span class = "title"><%=i.title%></span> <br>
+                            <span class = "description-text"><%=i.description%></span>
+                        </div>
+                        <div class = "date">
+                            <i class="fas fa-calendar-day"></i>
+                            <%=
+                            i.date.toString().slice(0,15)
+                            %>
+                        </div>
+                    </li>
+                    <%}%>
+                    </form>
+                </ul>
+
             </div>
 
         </div>

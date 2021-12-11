@@ -5,7 +5,18 @@ body{
 .text-align-center{
     text-align: center;
 }
-
+.d-flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+.dir-col{
+    flex-direction: column;
+}
 :root{
     --header-background : linear-gradient(to right,  rgba(42,72,107,1) 0%,rgba(80,122,167,1) 100%);
     --shadow:1px 5px 10px -5px rgba(0,0,0,0.5);
@@ -80,13 +91,14 @@ input,select{
     color:var(--input-label-color)
 }
 .add-btn{
-    font-size:1.2rem;
+    font-size:1.3rem;
     color:white;
     background-color: var(--input-label-color);
     border:none;
     padding:1rem;
     text-align: center;
     cursor: pointer;
+    font-weight: bold;
 }
 #inputSection{
     /* width:100%; */
@@ -120,7 +132,9 @@ input,select{
 
 
 /* lists */
-
+/* #lists{
+    margin-bottom: 3rem;
+} */
 .list-header{
     height:6vh;
     background: var(--header-background);
@@ -128,12 +142,13 @@ input,select{
     align-items: center;
     box-shadow: var(--shadow);
     border-left:5px solid pink;
+    margin:1rem;
 }
 
 .list-heading{
     font-size:1.5rem;
     color:white;
-    letter-spacing: 0.4rem;
+    letter-spacing: 0.2rem;
     margin:0.5rem 1rem;
 
 }
@@ -143,12 +158,14 @@ input,select{
 .list-item{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     border-left: 5px solid #EE4455;
     box-shadow: var(--shadow);
     min-height:6vh;
     overflow: hidden;
     margin:0.5rem;
     padding:0.5rem;
+    background-color: #cee5ff;
     
 }
 
@@ -174,35 +191,35 @@ input,select{
     font-size:large;
 }
 
-.bin{
+/* .bin{
     font-size:1.3rem;
     color:red;
     display: flex;
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
-}
+} */
 .date{
+    width:28%;
     font-size:1.3rem;
     font-weight: bold;
     color:black;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 .checkbox{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     font-size:1.5rem;
     cursor: pointer;
     color:green;
 }
 
+.checkbox input[type="checkbox"]{
+    height:1.6rem;
+    width: 1.6rem;
+}
 
-#completed-list .list-item{
-    background-color: #c2f0c2;
-}
-#pending-list .list-item{
-    background-color: #f0d9d9;
-}
