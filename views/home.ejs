@@ -70,28 +70,43 @@
                           <span class = "list-heading">()</span>
                       </div>
                       <ul id = "pending-list">
-                          <%for(let i of todolist){%>
-                            <%if(!<%=i.checked%>){%>
                          <li class = "list-item">
                              <div class = "checkbox">
                                 <i class="far fa-square"></i>
                              </div>
                               <div class = "category">
-                                  <span><%=i.category%></span>
+                                  <span>Shopping</span>
                               </div>
                               <div class = "item-info">
-                                  <span class = "title"><%=i.title%></span> <br>
-                                  <span class = "description-text"><%=i.description%></span>
+                                  <span class = "title">Football</span> <br>
+                                  <span class = "description-text">is a very Good Sport</span>
                               </div>
                               <div class = "bin">
                                 <i class="fas fa-trash-alt"></i>
                               </div>
                               <div class = "date">
-                                  <%=i.date%>
+                                  12/10/21
                                 </div>
                          </li>
-                          <%}%>
-                         <%}%>
+                         <li class = "list-item">
+                            <div class = "checkbox">
+                                <i class="far fa-square"></i>
+                             </div>
+                            <div class = "category">
+                                <span>Shopping</span>
+                            </div>
+                            <div class = "item-info">
+                                <span class = "title">Football</span> <br>
+                                <span class = "description-text">is a very Good Sport</span>
+                            </div>
+                            <div class = "bin">
+                              <i class="fas fa-trash-alt"></i>
+                            </div>
+                            <div class = "date">
+                                12/10/21
+                              </div>
+                       </li>
+
                       </ul>
                 </div>
                 <div id = "completed">
