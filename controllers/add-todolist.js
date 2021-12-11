@@ -16,5 +16,17 @@ module.exports.addList = function(req,res){
             console.log("****",newItem);
         }
     });
-    res.redirect('back');
+    // res.redirect('back');
+    todolist.find({},(err,todolist)=>{
+        if(err){
+            console.log("Cannot fetch data from the database ",err);
+            return;
+        }
+        res.render('home',{
+            animateType: 'animate-enter',
+            rotateAngle : 'rotate-135deg',
+            todolist
+        });
+
+    });
 };
