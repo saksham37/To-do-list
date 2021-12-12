@@ -3,11 +3,13 @@ const app = express();
 const port = 8000;
 const ejs = require('ejs');
 
-
+//connecting to the database
 const db = require('./config/mongoose');
 
 const todolist = require('./model/todolist');
-// Seting up the view engint - ejs
+
+
+// Setting up the view engine - ejs
 
 app.set('view engine','ejs');
 app.set('views','./views');
@@ -20,12 +22,7 @@ app.use(express.urlencoded());
 
 app.use('/',require('./routes'));
 
-// app.get('/home',(req,res)=>{
-//     res.render('home',{
-//         port
-//     });
-// })
-
+//server will listen to the specified port
 app.listen(port,(err)=>{
     if(err){
         console.log(`There is an error running the server at port ${port}`);

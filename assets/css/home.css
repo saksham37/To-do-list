@@ -1,13 +1,16 @@
 body{
     margin:0;
 }
+
+/* Google font - Rock Salt is used */
 .new-font{
     font-family: 'Rock Salt', serif;
     font-size:1.2rem;
     color:white;
     
 }
-    
+
+/* Following are the classes to enable flex functionalities */
 .text-align-center{
     text-align: center;
 }
@@ -23,11 +26,15 @@ body{
 .dir-col{
     flex-direction: column;
 }
+
+/* Assigning values to the css variables, for the functionalities that are used repeatedly */
 :root{
     --header-background : linear-gradient(to right,  rgba(42,72,107,1) 0%,rgba(80,122,167,1) 100%);
     --shadow:1px 5px 10px -5px rgba(0,0,0,0.5);
     --input-label-color: #607D8B;
 }
+
+/* Main Container */
 #container{
   width:50%;
   margin: auto;
@@ -35,11 +42,12 @@ body{
 
 }
 
-
+/* Rotate class for animation */
 .rotate-135deg{
  transform: rotate(135deg);
 }
 
+/* Header Section */
 header{
     height: 10vh;
     background:var(--header-background);
@@ -109,16 +117,12 @@ input,select{
     font-weight: bold;
 }
 #inputSection{
-    /* width:100%; */
     width: 100%;
      display: flex;
      justify-content: center;
      box-sizing: border-box;
      padding:2rem;
-     top:100px;
-
-    /* position: absolute; */
-   
+     top:100px;   
     transition:all 0.5s ease-in-out;
 
     border-bottom: 2px solid blue;
@@ -126,23 +130,17 @@ input,select{
 
 }
 .animate-exit{
-    /* top:-70 !important; */
-    /* transform: translate(-70) !important; */
     height:0;
     transform: scale(0);
 }
 .animate-enter{
-    /* top:100px !important; */
-    /* transform: translate(100) !important; */
     height:40vh;
     transform: scale(1);
 }
 
 
-/* lists */
-/* #lists{
-    margin-bottom: 3rem;
-} */
+/* Pending tasks list */
+
 .list-header{
     height:6vh;
     background: var(--header-background);
@@ -199,14 +197,6 @@ input,select{
     font-size:large;
 }
 
-/* .bin{
-    font-size:1.3rem;
-    color:red;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-} */
 .date{
     width:28%;
     font-size:1.3rem;

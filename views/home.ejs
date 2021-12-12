@@ -1,29 +1,31 @@
 <html>
     <head>
         <title>To do list app</title>
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-      />
+   
+        <!-- Css link to add Google Fonts -->
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock Salt">
 
+        <!-- Fontawesome script tag for including icons -->
         <script src="https://kit.fontawesome.com/e178782a14.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="/css/home.css">
     </head>
     <body>
+        <!-- The container will have all the sections of the page -->
         <div id = "container">
             <header>
+                <!-- Header contains the main heading and the toggle button  -->
                 <div class = "headerText">My TODO List</div>
                 <div class = "new-font">
                     Click here to Toggle
                     <i class="fas fa-long-arrow-alt-right"></i>
                 </div>
-                
+                <!-- The toggle button is used to hide/show the input section -->
                 <div id = "toggle" class="toggleButton">
                     <i class="fas fa-plus <%=rotateAngle%>"></i>
                 </div>
                 
             </header>
+            <!-- The input section is a form that will take information from the user about a particular task -->
             <div id = "inputSection" class="<%=animateType%>">
                <form action="/add-todolist" method="post">
                     <table>
@@ -70,6 +72,7 @@
                     </table>
                </form>
             </div>
+            <!-- The delete button is used to delete the checked tasks -->
             <div id = "delete-tasks" class = "list-header">
                    <span class="list-heading">
                           Select tasks to delete
@@ -81,6 +84,7 @@
                        <i class="fas fa-trash-alt"></i>
                 </button>
             </div>
+            <!-- The pending tasks are shown in the form of an unordered list  -->
             <div id = "lists">
                 <div class = "list-header">
                     <span class = "list-heading"> Pending Tasks</span>
@@ -114,5 +118,6 @@
 
         </div>
     </body>
+    <!-- link for the javascript file -->
     <script src="/js/home.js"></script>
 </html>

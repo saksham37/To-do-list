@@ -1,5 +1,7 @@
+// Adding mongoose library to create schema
 const mongoose = require('mongoose');
 
+// The following schema is followed for each document in the collection
 const todolistSchema = new mongoose.Schema({
     category: {
         type : String,
@@ -19,6 +21,9 @@ const todolistSchema = new mongoose.Schema({
     }
 }); 
 
+//Defining the schema
 const todolist = mongoose.model('todolist',todolistSchema);
 
+
+//the 'todolist' has to be made exportable
 module.exports = todolist;
